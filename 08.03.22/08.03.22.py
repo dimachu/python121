@@ -1,15 +1,16 @@
-from tkinter import *
+import tkinter as tk
 
-root = Tk()
+window = tk.Tk()
 
-name = StringVar()
+window.geometry('150x150')
 
-name_label = Label(text="Введите имя:")
+label = tk.Label(
+    text="Введите имя",
+    height=5
+)
+entry = tk.Entry()
 
-name_label.grid(row=0, column=0, sticky="w")
+label.pack()
+entry.pack()
 
-name_entry = Entry(textvariable=name)
-
-name_entry.grid(row=0, column=1, padx=5, pady=5)
-
-root.mainloop()
+window.mainloop()
